@@ -7,7 +7,6 @@ public class CircularPetrolPumpProblem {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 
 		int p[]={4,6,7,4};
@@ -28,7 +27,7 @@ public class CircularPetrolPumpProblem {
 			else
 			{
 				tank=0;
-				start=(i+1)%p.length;
+				start=(i+1)%p.length;  
 				
 				if(start==0)
 					end=p.length-1;

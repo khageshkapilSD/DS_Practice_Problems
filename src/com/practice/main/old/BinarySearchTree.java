@@ -1,6 +1,6 @@
-package com.practice.main;
+package com.practice.main.old;
 // Java program to demonstrate insert operation in binary search tree
-class BinarySearchTree {
+public class BinarySearchTree {
 
 	/* Class containing left and right child of current node and key value*/
 	class Node {
@@ -54,8 +54,21 @@ class BinarySearchTree {
 	void inorderRec(Node root) {
 		if (root != null) {
 			inorderRec(root.left);
-			System.out.println(root.key);
+			System.out.print(root.key+" ");
 			inorderRec(root.right);
+		}
+	}
+	
+	void revInorder(){
+		revInorder(root);
+	}
+	
+	//A utility method to do reverse inorder traversal
+	void revInorder(Node root) {
+		if(root!=null) {
+			revInorder(root.right);
+			System.out.print(root.key+" ");
+			revInorder(root.left);
 		}
 	}
 
@@ -64,11 +77,11 @@ class BinarySearchTree {
 		BinarySearchTree tree = new BinarySearchTree();
 
 		/* Let us create following BST
-			50
+		  50
 		/	 \
-		30	 70
-		/ \ / \
-	20 40 60 80 */
+	   30	  70
+	  /	\     / \
+	20  40  60  80 */
 		tree.insert(50);
 		tree.insert(30);
 		tree.insert(20);
@@ -79,6 +92,8 @@ class BinarySearchTree {
 
 		// print inorder traversal of the BST
 		tree.inorder();
+		System.out.println();
+		tree.revInorder();
 	}
 }
 // This code is contributed by Ankur Narain Verma

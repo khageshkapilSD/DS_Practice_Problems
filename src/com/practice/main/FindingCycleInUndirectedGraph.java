@@ -70,7 +70,6 @@ public class FindingCycleInUndirectedGraph
         return false;
     }
  
- 
     // Driver method to test above methods
     public static void main(String args[])
     {
