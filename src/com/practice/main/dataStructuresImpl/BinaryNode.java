@@ -12,6 +12,13 @@ public class BinaryNode<Type extends Comparable<Type>> {
 		leftNode = rightNode = null;
 	}
 	
+	
+	public BinaryNode(Type data,BinaryNode<Type> leftNode,BinaryNode<Type> rightNode) {
+		this.data = data;
+		this.leftNode =  leftNode;
+		this.rightNode = rightNode;
+	}
+	
 	public BinaryNode<Type> getLeft() {
 		return leftNode;
 	}
