@@ -6,6 +6,7 @@ public class BinaryNode<Type extends Comparable<Type>> {
 	private Type data;
 	private BinaryNode<Type> leftNode;
 	private BinaryNode<Type> rightNode;
+	private int height;
 	
 	public BinaryNode(Type data) {
 		this.data = data;
@@ -42,5 +43,12 @@ public class BinaryNode<Type extends Comparable<Type>> {
 	public Type getData() {
 		return data;
 	}
+	
+	public void setHeight(int height) {
+		this.height = height;
+	}
 
+	public int getHeight() {
+		return height;
+	}
 }
